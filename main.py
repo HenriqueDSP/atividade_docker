@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from regras.controle_de_dados import salvar_dados, recupera_registros
+import os
 
 app = Flask(__name__)
 
@@ -16,4 +17,5 @@ def registro():
     return render_template('registros.html', dados=dados)
 
 if __name__ == '__main__':
-    app.run(port=8000, host='localhost', debug=True)
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host="0.0.0.0", port=port)
