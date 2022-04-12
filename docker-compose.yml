@@ -6,7 +6,5 @@ web:
   - db
   volumes:
   - .:/data
-  enviroment:
-  - PORT-REDIS
   ports:
     - "5000:5000"
