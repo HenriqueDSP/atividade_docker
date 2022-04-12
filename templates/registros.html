@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>E-mail</td>
+            <td>CEP</td>
+            <td>Endereço</td>
+            <td>Número</td>
+            <td>Cidade</td>
+            <td>Estado</td>
+            <td>Complemento</td>
+        </tr>
+        {% for dado_do_usuario in dados %}        
+            <tr>
+                <td>{{dado_do_usuario.nome}}</td>
+                <td>{{dado_do_usuario.email}}</td>
+                <td>{{dado_do_usuario.cep}}</td>
+                <td>{{dado_do_usuario.endereco}}</td>
+                <td>{{dado_do_usuario.numero}}</td>
+                <td>{{dado_do_usuario.cidade}}</td>
+                <td>{{dado_do_usuario.estado}}</td>
+                <td>{{dado_do_usuario.complemento}}</td>
+            </tr>
+        {% endfor %}        
+    </table>    
+</body>
+</html>
