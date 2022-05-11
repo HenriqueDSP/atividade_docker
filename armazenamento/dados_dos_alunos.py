@@ -45,5 +45,7 @@ def cadastra_usuario(nome, email, cep, endereco, numero, cidade, estado, complem
 
 def consulta_registros():
     dados_dos_alunos = session.query(Aluno).all()
+    for aluno in dados_dos_alunos:
+        print(aluno)
     session.close()
     return dados_dos_alunos
