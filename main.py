@@ -18,6 +18,7 @@ def cadastro_de_alunos():
 @app.route('/registros_de_alunos', methods=['GET'])
 def registros_de_alunos():
     dados = recupera_registros()
+    print(dados)
     return render_template('registro_dos_alunos.html', dados=dados)
 
 if __name__ == '__main__':
